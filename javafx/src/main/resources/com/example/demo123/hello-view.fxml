@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="263.0" prefWidth="734.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="217.0" layoutY="14.0" prefHeight="120.0" prefWidth="217.0" text="Player">
+         <font>
+            <Font size="49.0" />
+         </font>
+      </Label>
+      <Button fx:id="playBtn" layoutX="14.0" layoutY="134.0" mnemonicParsing="false" onAction="#playBtnAction" prefHeight="68.0" prefWidth="89.0" text="PLAY" />
+      <Button fx:id="pauseBtn" layoutX="103.0" layoutY="134.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="89.0" text="PAUSE" />
+      <Button fx:id="resetBtn" layoutX="192.0" layoutY="134.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="89.0" text="RESET" />
+      <Button fx:id="previousBtn" layoutX="281.0" layoutY="134.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="89.0" text="PREVIOUS" />
+      <Button fx:id="nextBtn" layoutX="367.0" layoutY="134.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="89.0" text="NEXT" />
+      <ComboBox layoutX="456.0" layoutY="134.0" prefHeight="68.0" prefWidth="113.0" promptText="SPEED" />
+      <Slider layoutX="569.0" layoutY="160.0" />
+   </children>
+</AnchorPane>
