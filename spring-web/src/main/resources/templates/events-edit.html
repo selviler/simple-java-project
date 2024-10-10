@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="~{layout}">
+<link rel = "stylesheet" th:href="@{/css/styles.css}" />
+<title>Create Form</title>
+<body>
+<section layout:fragment="section" class="py-5">
+  <div class="container px-4 px-lg-5 mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-12">
+        <form role="form" method="post" th:action="@{/events/{id}/edit(id=${event.id})}" th:object="${event}">
+
+          <div class="form-group mb-4">
+            <label for="name">Email address</label>
+            <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    name="name"
+                    th:field="*{name}"
+                    aria-describedby="emailHelp"
+                    placeholder="Enter name">
+            <small th:if="${#fields.hasErrors('name')}" th:errors="*{name}" id="name1" class="form-text text-muted"></small>
+          </div>
+          <div class="form-group mb-4">
+            <label for="photoUrl">Photo</label>
+            <input
+                    type="text"
+                    class="form-control"
+                    id="photoUrl"
+                    name="photoUrl"
+                    th:field="*{photoUrl}"
+                    aria-describedby="emailHelp"
+                    placeholder="Enter photo">
+            <small th:if="${#fields.hasErrors('photoUrl')}" th:errors="*{photoUrl}" id="photoUrl1" class="form-text text-muted"></small>
+          </div>
+          <div class="form-group mb-4">
+            <label for="photoUrl">Type</label>
+            <input
+                    type="text"
+                    class="form-control"
+                    id="type"
+                    name="type"
+                    th:field="*{type}"
+                    aria-describedby="emailHelp"
+                    placeholder="Enter type">
+            <small th:if="${#fields.hasErrors('type')}" th:errors="*{type}" id="content1" class="form-text text-muted"></small>
+          </div>
+
+          <div class="form-group mb-4">
+            <label for="photoUrl">Start time</label>
+            <input
+                    type="datetime-local"
+                    class="form-control"
+                    id="startTime"
+                    name="startTime"
+                    th:field="*{startTime}"
+                    placeholder="Start Time">
+            <small th:if="${#fields.hasErrors('startTime')}" th:errors="*{startTime}" id="startTime1" class="form-text text-muted"></small>
+          </div>
+
+          <div class="form-group mb-4">
+            <label for="photoUrl">End time</label>
+            <input
+                    type="datetime-local"
+                    class="form-control"
+                    id="endTime"
+                    name="endTime"
+                    th:field="*{endTime}"
+                    placeholder="End Time">
+            <small th:if="${#fields.hasErrors('endTime')}" th:errors="*{endTime}" id="endTime1" class="form-text text-muted"></small>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+</body>
+</html>
